@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "nanocolors": "*",
+    "colorette": "*"
+  }
+}
