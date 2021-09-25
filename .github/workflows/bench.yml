@@ -1,5 +1,7 @@
 name: Benchmarks
-on: push
+on:
+  push:
+  pull_request:
 jobs:
   bench:
     runs-on: ubuntu-latest
