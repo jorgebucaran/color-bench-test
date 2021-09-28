@@ -5,25 +5,13 @@ const show = (name) =>
   console.log(name.padEnd(14), (performance.now() - before).toFixed(2) + "ms")
 
 before = performance.now()
-let nanocolors = require("nanocolors")
+const nanocolors = require("nanocolors")
 show("nanocolors")
 
 before = performance.now()
-let colorette = require("colorette")
-show("colorette")
+const picocolors = require("picocolors")
+show("picocolors")
 
 before = performance.now()
-nanocolors = require("nanocolors")
-show("nanocolors")
-
-before = performance.now()
-colorette = require("colorette")
-show("colorette")
-
-before = performance.now()
-nanocolors = require("nanocolors")
-show("nanocolors")
-
-before = performance.now()
-colorette = require("colorette")
+const colorette = require("colorette")
 show("colorette")

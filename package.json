@@ -4,6 +4,7 @@
   "devDependencies": {
     "benchmark": "^2.1.4",
     "nanocolors": ">=0.2.6",
+    "picocolors": "*",
     "colorette": "*"
   }
 }
