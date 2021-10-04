@@ -8,14 +8,15 @@ import * as colorette_2_0_10 from "colorette_2_0_10"
 const test = (c) => c.red(c.bold("bold") + " red")
 
 new bench.Suite()
+  .add("noop", () => () => {})
   .add("colorette_2_0_10", () => test(colorette_2_0_10))
   .add("nanocolors", () => test(nanocolors))
-  .add("colorette_2_0_10", () => test(colorette_2_0_10))
   .on("cycle", ({ target: { name, hz } }) => {
-    console.log(
-      name.padEnd(14).padEnd(15),
-      Math.round(hz).toLocaleString(),
-      "ops/sec"
-    )
+    if (name !== "noop")
+      console.log(
+        name.padEnd(14).padEnd(15),
+        Math.round(hz).toLocaleString(),
+        "ops/sec"
+      )
   })
   .run()
