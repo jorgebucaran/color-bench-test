@@ -14,7 +14,7 @@ new bench.Suite()
   .on("cycle", ({ target: { name, hz } }) => {
     if (name !== "noop")
       console.log(
-        name.padEnd(14).padEnd(15),
+        name.padEnd(14).padEnd(20),
         Math.round(hz).toLocaleString(),
         "ops/sec"
       )
