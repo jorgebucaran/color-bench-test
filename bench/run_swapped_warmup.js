@@ -9,8 +9,8 @@ const test = (c) => c.red(c.bold("bold") + " red")
 
 new bench.Suite()
   .add("noop", () => test(colorette_2_0_10))
-  .add("colorette_2_0_10", () => test(colorette_2_0_10))
   .add("nanocolors", () => test(nanocolors))
+  .add("colorette_2_0_10", () => test(colorette_2_0_10))
   .on("cycle", ({ target: { name, hz } }) => {
     if (name !== "noop")
       console.log(
