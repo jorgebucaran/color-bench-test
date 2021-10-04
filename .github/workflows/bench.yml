@@ -11,4 +11,4 @@ jobs:
         with:
           node-version: 16
       - name: Benchmarks
-        run: npm install && ./bench/load.cjs && echo && FORCE_COLOR= ./bench/run.js
+        run: npm install && FORCE_COLOR= node bench/run.js && echo ===== swap order ====== && FORCE_COLOR= node bench/run_swapped.js

@@ -8,9 +8,9 @@ import * as colorette_2_0_10 from "colorette_2_0_10"
 const test = (c) => c.red(c.bold("bold") + " red")
 
 new bench.Suite()
-  .add("nanocolors", test.bind({}, nanocolors))
   .add("colorette_2_0_10", test.bind({}, colorette_2_0_10))
   .add("nanocolors", test.bind({}, nanocolors))
+  .add("colorette_2_0_10", test.bind({}, colorette_2_0_10))
   .on("cycle", ({ target: { name, hz } }) => {
     console.log(
       name.padEnd(14).padEnd(15),
